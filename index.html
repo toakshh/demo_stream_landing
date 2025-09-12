@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="/_next/static/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin=""
+        type="font/woff2">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/rpm-hero-header.webp">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/Posed-GroupShot.webp">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/restyle.webp">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/asset_morphing.webp">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/shape3d.webp">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/dev-studio-flip.webp">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/sdk-flip.webp">
+    <link rel="preload" as="image" href="https://media.readyplayer.me/nexus/images/ugc-tools-flip.webp">
+    <link rel="stylesheet" href="css/css-d97aee4014f44f6b.css" data-precedence="next">
+    <link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/webpack-0acd0d82b5d35d56.js">
+    <script src="js/chunks-4bd1b696-82686c684d2316e5.js" async=""></script>
+    <script src="js/chunks-684-6e17871dc40d8c66.js" async=""></script>
+    <script src="js/chunks-main-app-86201a5c7b6d811b.js" async=""></script>
+    <script src="js/chunks-626-f5cf4424f3949de0.js" async=""></script>
+    <script src="js/app-layout-4981e721e0bea805.js" async=""></script>
+    <script src="js/chunks-728-b899684efdf099ae.js" async=""></script>
+    <script src="js/chunks-63-dbc69ed7d4eb29ad.js" async=""></script>
+    <script src="js/chunks-685-425896b0d1041d38.js" async=""></script>
+    <script src="js/app-page-dcd3b047ece5371e.js" async=""></script>
+    <meta name="next-size-adjust" content="">
+    <title>Integrate an avatar creator into your game in days - Ready Player Me copy</title>
+    <meta name="description"
+        content="Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.">
+    <meta property="og:title" content="Integrate an avatar creator into your game in days - Ready Player Me">
+    <meta property="og:description"
+        content="Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.">
+    <meta property="og:image"
+        content="https://cdn.prod.website-files.com/647798cf71ec2048ea89ab07/64906dc72429f7d76d3e08ff_RPM_OG_IMG_1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Integrate an avatar creator into your game in days - Ready Player Me">
+    <meta name="twitter:description"
+        content="Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.">
+    <meta name="twitter:image"
+        content="https://cdn.prod.website-files.com/647798cf71ec2048ea89ab07/64906dc72429f7d76d3e08ff_RPM_OG_IMG_1200x630.png">
+    <link rel="shortcut icon" href="favicons/2177--favicon.ico">
+    <link rel="icon" href="favicons/7701--favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="favicons/4075--favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="favicons/1088--favicon-48x48.ico" sizes="48x48" type="image/png">
+    <link rel="icon" href="favicons/7285--favicon-96x96.png" sizes="96x96" type="image/png">
+    <link rel="apple-touch-icon" href="favicons/8643--favicon-16x16.png">
+    <script src="js/chunks-polyfills-42372ed130431b0a.js" nomodule=""></script>
+</head>
+
+<body class="__className_e8ce0c bg-black text-white">
+    <div class="min-h-screen bg-black text-white flex flex-col"
+        style="background-image:url('https://media.readyplayer.me/webpage/images/webpage-background-colorful-dots.svg');background-repeat:repeat">
+        <nav class="h-[161px] absolute top-0 left-0 right-0 z-50 flex items-center">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex-shrink-0"><a aria-label="home" data-analytics-name="page_header"
+                            data-analytics-subject="home" href="readyplayer.html"><img class="" loading="lazy"
+                                src="images/images-rpm-logo.svg" alt="Ready Player Me"></a></div>
+                    <div class="hidden lg:flex items-center justify-center flex-1">
+                        <div class="bg-black rounded-full px-6 py-2">
+                            <div class="flex items-center gap-2">
+                                <div class="relative px-3.5 group"><button
+                                        class="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium  cursor-pointer"
+                                        data-analytics-name="page_header"
+                                        data-analytics-subject="products"><span>Products</span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-chevron-down h-4 w-4 transition-transform">
+                                            <path d="m6 9 6 6 6-6"></path>
+                                        </svg></button></div>
+                                <div class="relative px-3.5 group"><button
+                                        class="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium  cursor-pointer"
+                                        data-analytics-name="page_header"
+                                        data-analytics-subject="developers"><span>Developers</span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-chevron-down h-4 w-4 transition-transform">
+                                            <path d="m6 9 6 6 6-6"></path>
+                                        </svg></button></div>
+                                <div class="relative px-3.5 group"><a
+                                        class="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium "
+                                        data-analytics-name="page_header" data-analytics-subject="forums"
+                                        href="https://forum.readyplayer.me/"><span>Forums</span></a></div>
+                                <div class="relative px-3.5 group"><button
+                                        class="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium  cursor-pointer"
+                                        data-analytics-name="page_header"
+                                        data-analytics-subject="resources"><span>Resources</span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-chevron-down h-4 w-4 transition-transform">
+                                            <path d="m6 9 6 6 6-6"></path>
+                                        </svg></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block"><button
+                            class="px-6 py-2 text-white font-medium text-sm rounded-full transition-all duration-300 hover:opacity-90"
+                            style="background:#6542FF" data-analytics-name="page_header"
+                            data-analytics-subject="login">Log in</button></div>
+                    <div class="lg:hidden"><button class="text-white hover:text-gray-300 transition-colors p-2"
+                            aria-label="Open menu" data-analytics-name="page_header_mobile"
+                            data-analytics-subject="menu_open"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                                <line x1="4" x2="20" y1="12" y2="12"></line>
+                                <line x1="4" x2="20" y1="6" y2="6"></line>
+                                <line x1="4" x2="20" y1="18" y2="18"></line>
+                            </svg></button></div>
+                </div>
+            </div>
+        </nav>
+        <main class="flex-1 z-10">
+            <section class="relative h-screen overflow-hidden bg-black "
+                style="background-image:url('https://media.readyplayer.me/webpage/images/webpage-background.svg');background-repeat:repeat">
+                <div
+                    class="absolute inset-x-0 top-[180px] md:top-[160px] flex flex-col items-center justify-center px-4">
+                    <p
+                        class="font-montreal font-medium text-sm md:text-[20px] lg:text-[20px] xl:text-[30px] leading-none uppercase text-center">
+                        Avatars that go</p>
+                    <h1 class="font-raging uppercase font-black text-7xl sm:text-8xl md:text-[120px] lg:text-[200px] xl:text-[290px] text-white select-none pointer-events-none leading-none text-center"
+                        style="font-feature-settings:'ss01' on;text-shadow:0 0 250px rgba(235, 51, 255, 0.44), 0 0 31px rgba(154, 66, 255, 0.44), 0 0 250px rgba(157, 66, 255, 0.80), 0 0 50px rgba(167, 66, 255, 0.40), 0 0 44.9px rgba(101, 66, 255, 0.44)">
+                        BEYD YOUR GAME</h1>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center z-10">
+                    <div class="relative w-[150%] sm:w-full max-w-none sm:max-w-[1920px] sm:mx-auto sm:px-4 mx-[-44%] ">
+                        <img alt="Avatar characters with dramatic lighting" width="1920" height="1080" decoding="async"
+                            data-nimg="1" class="w-full h-auto object-contain" style="color:transparent"
+                            src="images/images-rpm-hero-header.webp"></div>
+                </div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20 pointer-events-none">
+                </div>
+                <div class="absolute bottom-[15%] md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 px-4">
+                    <div
+                        class="w-full max-w-sm md:max-w-96 inline-flex flex-col justify-start items-center gap-3 md:gap-4">
+                        <div
+                            class="self-stretch h-auto md:h-20 text-center justify-center text-white text-sm md:text-xl font-normal font-['Neue_Montreal'] leading-5 md:leading-7">
+                            India's top streamer use Ultron AI to stream with our avatars</div><button
+                            class="font-montreal text-base px-7 py-3 border-white border rounded-3xl text-white font-medium transition-all duration-300 ease-out hover:bg-[#6542FF] hover:shadow-[0_0_79.6px_0_#3C2EFF,_0_0_26.533px_0_#6542FF] hover:border-[#6542FF] active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 cursor-pointer"
+                            data-analytics-name="hero_banner" data-analytics-subject="sign_up_now">Sign in now</button>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-16 md:pt-24">
+                <div class="w-[1px] h-32 md:h-64 m-auto" style="background:white"></div>
+            </section>
+            <section class="relative py-16 lg:py-24 overflow-hidden"
+                style="background-image:url('https://media.readyplayer.me/webpage/images/webpage-background-colorful-dots.svg');background-repeat:repeat">
+                <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center lg:grid-flow-col-dense">
+                        <div class="relative lg:order-1">
+                            <div class="relative rounded-2xl overflow-hidden shadow-2xl"><video
+                                    class="h-auto object-cover" autoplay="" loop="" muted="" playsinline="">
+                                    <source src="https://media.readyplayer.me/nexus/videos/hero-rpm_out.mp4"
+                                        type="video/mp4">
+                                    </source>Your browser does not support the video tag.
+                                </video></div>
+                        </div>
+                        <div class="relative lg:order-2">
+                            <div class="pl-4 md:pl-8 flex flex-col gap-4 md:gap-6">
+                                <p class="font-montreal uppercase text-lg md:text-xl">your avatar, your identity, any
+                                    game</p>
+                                <div class="font-raging uppercase text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+                                    style="font-feature-settings:'ss01' on;line-height:0.8;letter-spacing:normal">
+                                    <h2 class="text-[clamp(2.5rem,15vw,6.25rem)]">cross-game avatars</h2>
+                                    <h2 class="text-[clamp(3.5rem,15vw,6.25rem)]"
+                                        style="background:linear-gradient(180deg, #FFF -27.86%, #5C33FF 99.8%), linear-gradient(180deg, #FFF -27.86%, #5C33FF 99.8%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:0.8">
+                                        made easy.</h2>
+                                </div>
+                                <p class="font-montreal text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+                                    Ready Player Me provides developers with the tools and infrastructure to power
+                                    cross-game avatars, build fully customizable avatar creators, and unlock new ways to
+                                    engage and monetize players.</p>
+                                <div><button
+                                        class="font-montreal text-base px-7 py-3 rounded-3xl border-white border text-white font-medium relative overflow-hidden transition-all duration-300 ease-out hover:pr-16 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 group cursor-pointer"
+                                        data-analytics-name="crossgame_avatars"
+                                        data-analytics-subject="try_the_demo"><span class="relative"><span
+                                                class="transition-all duration-300 ease-out">Try the demo</span><span
+                                                class="absolute right-[-50px] top-0 bottom-0 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="39" height="19"
+                                                    viewbox="0 0 39 19" fill="none">
+                                                    <g clip-path="url(#clip0_343_8939)">
+                                                        <path d="M0.375 9.4375H38.1349" stroke="white"
+                                                            stroke-width="1.09164" stroke-miterlimit="10"></path>
+                                                        <path
+                                                            d="M29.7734 18.328L38.2282 9.43787L29.7734 0.544922L38.2282 9.43787"
+                                                            stroke="white" stroke-width="1.09164"
+                                                            stroke-miterlimit="10"></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clippath id="clip0_343_8939">
+                                                            <rect width="38.625" height="18.5923" fill="white"
+                                                                transform="translate(0.375 0.140625)"></rect>
+                                                        </clippath>
+                                                    </defs>
+                                                </svg></span></span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="relative w-full bg-white md:bg-transparent mb-16 md:mb-0"><svg
+                    class="hidden md:block w-full h-auto" viewbox="0 0 1425 778" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none" style="min-height:100px">
+                    <path
+                        d="M1694.5 777.159C1569.98 704.537 1168.53 651.371 692.53 651.371C259.128 651.371 -112.467 695.447 -269.501 758.153V19.8447C-112.467 82.5513 259.128 126.628 692.53 126.628C1168.53 126.628 1569.97 73.4628 1694.5 0.84082V777.159Z"
+                        fill="white"></path>
+                </svg>
+                <div class="md:absolute md:inset-0 flex flex-col justify-center items-center px-4 py-12 md:py-0">
+                    <div class="text-center mx-auto max-w-5xl">
+                        <h2 class="font-raging text-[clamp(3.5rem,15vw,6.25rem)] 2xl:text-[185px] text-[#6542FF] uppercase leading-tight md:leading-[120px] xl:leading-[166px] mb-4 md:mb-6"
+                            style="font-feature-settings:'ss01' on">a fragmented market</h2>
+                        <p
+                            class="max-w-[854px] mx-auto text-center justify-center text-black text-sm md:text-lg lg:text-xl font-normal font-montreal leading-6 md:leading-7">
+                            Every game is different - different engines, devices, standards, and art styles. Moving
+                            avatars and assets between them is complex: rigs, animations, level of detail, and
+                            performance budgets rarely align. Ready Player Me solves this with infrastructure designed
+                            for interoperability. Our technology handles translation, optimization, and delivery across
+                            engines, platforms, and formats - ensuring avatars and assets perform consistently, look
+                            great, and fit seamlessly into any experience.<!-- --> </p>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-0 md:pt-4 bg-black">
+                <div class="w-[1px] h-32 md:h-64 m-auto" style="background:white"></div>
+            </section>
+            <section class="w-full pt-16 md:pt-24 pb-16 md:pb-24 bg-black">
+                <div class="container text-center mx-auto px-4">
+                    <h2 class="font-monument font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl uppercase leading-tight md:leading-[73px] text-transparent"
+                        style="background:linear-gradient(180deg, #FFF -27.86%, #5C33FF 99.8%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+                        We've been building avatars for 10+ years</h2>
+                    <p class="font-montreal text-lg md:text-xl uppercase text-white mt-6 md:mt-10">Trusted by 25000+
+                        developers</p>
+                </div>
+                <div class="mt-12 md:mt-24">
+                    <section class="partners mx-auto">
+                        <div
+                            class="group flex overflow-hidden p-2 [gap:var(--gap)] flex-row [--duration:20s] [--gap:70px]">
+                            <div class="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f6f72743c73ea8afe4daae_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373fac8-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd54e2de99a1f39d2dc_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373faca-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd58f3e573963e868a3_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373facb-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd66350f25882e580f7_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373facc-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd4a06ef34912b8ee91_Image%20%5Bpartner_image%5D.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd5f980a473e4e9d61c_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373fac7-e373fabf%5D%20(1).avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                            </div>
+                            <div class="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f6f72743c73ea8afe4daae_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373fac8-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd54e2de99a1f39d2dc_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373faca-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd58f3e573963e868a3_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373facb-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd66350f25882e580f7_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373facc-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd4a06ef34912b8ee91_Image%20%5Bpartner_image%5D.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd5f980a473e4e9d61c_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373fac7-e373fabf%5D%20(1).avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                            </div>
+                            <div class="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row">
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f6f72743c73ea8afe4daae_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373fac8-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd54e2de99a1f39d2dc_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373faca-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd58f3e573963e868a3_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373facb-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd66350f25882e580f7_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373facc-e373fabf%5D-1.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd4a06ef34912b8ee91_Image%20%5Bpartner_image%5D.avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                                <div class="logo-marquee_item"><img
+                                        src="images/647798cf71ec2048ea89ab07-67f7dcd5f980a473e4e9d61c_Image%20%5Bw-node-_6895ccef-607c-8236-0819-0edde373fac7-e373fabf%5D%20(1).avif"
+                                        loading="lazy" width="200" alt="" class="logo-marquee_img"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <section class="w-full">
+                <div class="media flex justify-center items-start py-6 md:py-12 px-2.5 self-stretch gap-2.5"><img
+                        src="images/images-Posed-GroupShot.webp" alt="Ready Player Me avatar group shot"
+                        class="w-full h-auto max-w-full object-contain"></div>
+            </section>
+            <section class="container mx-auto px-4"
+                style="background-image:url('https://media.readyplayer.me/webpage/images/webpage-background-colorful-dots.svg');background-repeat:repeat">
+                <h2 class="text-center font-raging text-[clamp(3.5rem,15vw,6.25rem)] leading-tight md:leading-[120px] xl:leading-[140px] uppercase"
+                    style="font-feature-settings:'ss01' on"><span class="text-white">any asset. </span><span
+                        class="text-transparent"
+                        style="background:linear-gradient(180deg, #FFF 37.81%, #5C33FF 99.8%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">any
+                        avatar.</span></h2>
+                <div class="pt-12 md:pt-20 pb-16 md:pb-24 flex flex-col md:flex-row justify-center gap-8 md:gap-12">
+                    <div class="w-full max-w-[460px] flex gap-4 md:gap-8">
+                        <div class="w-[1px] bg-white flex-shrink-0"></div>
+                        <div class="text-white">
+                            <p
+                                class="uppercase font-monument text-2xl md:text-4xl font-bold leading-tight md:leading-[35px]">
+                                expand your audience</p>
+                            <p class="font-montreal text-lg md:text-xl leading-6 md:leading-7">Bring any avatar or asset
+                                into your game without rebuilding your pipeline. We handle style translation,
+                                auto-rigging, and optimization behind the scenes, translating them to fit your game's
+                                specs.</p>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-[460px] flex gap-4 md:gap-8">
+                        <div class="w-[1px] bg-white flex-shrink-0"></div>
+                        <div class="text-white">
+                            <p
+                                class="uppercase font-monument text-2xl md:text-4xl font-bold leading-tight md:leading-[35px]">
+                                Unlock new revenue</p>
+                            <p class="font-montreal text-lg md:text-xl leading-6 md:leading-7">Make your avatars and
+                                assets work beyond your own game. Enable your players to use them across thousands of
+                                games and platforms, extending their value and creating new opportunities for
+                                monetization.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container m-auto py-16 md:py-24 px-4"
+                style="background-image:url('https://media.readyplayer.me/webpage/images/webpage-background-colorful-dots.svg');background-repeat:repeat">
+                <div
+                    class="font-raging text-[clamp(3.5rem,15vw,6.25rem)] leading-tight md:leading-[120px] xl:leading-[166px] uppercase font-bold text-center pb-12 md:pb-20">
+                    <h2 class="block text-white" style="font-feature-settings:'ss01' on">a decade OF R&amp;D buildING
+                    </h2>
+                    <h2 class="block text-transparent"
+                        style="font-feature-settings:'ss01' on;background:linear-gradient(180deg, #FFF 0%, #5C33FF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+                        AI POWERED TECH stack</h2>
+                </div>
+                <section class="py-8 md:py-16 lg:py-24">
+                    <div class="px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="p-6 relative flex flex-col justify-center items-start "
+                                style="border-radius:30px;background:linear-gradient(0deg, #6542FF 0%, #6542FF 100%), #000;box-shadow:0 0 20px 7.846px rgba(102, 0, 255, 0.30), 0 0 50px 7.846px rgba(102, 0, 255, 0.50)">
+                                <div class="w-full mb-6 rounded-2xl overflow-hidden bg-black relative"><img
+                                        src="images/images-restyle.webp" alt="RESTYLE"
+                                        class="w-full h-auto object-cover transition-opacity duration-300 opacity-100"><video
+                                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 "
+                                        muted="" loop="" playsinline="">
+                                        <source src="https://media.readyplayer.me/nexus/videos/restyle_demo.mp4"
+                                            type="video/mp4">
+                                        </source>Your browser does not support the video tag.
+                                    </video></div>
+                                <div class="w-full flex flex-col items-center text-center">
+                                    <h3 class="font-raging text-5xl xl:text-7xl text-white mb-6">RESTYLE</h3>
+                                    <p class="font-montreal text-lg lg:text-xl text-white mb-8 leading-relaxed">Use AI
+                                        to create stylized variants of avatars for concepting or in-game use.</p>
+                                </div>
+                            </div>
+                            <div class="p-6 relative flex flex-col justify-center items-start "
+                                style="border-radius:30px;background:linear-gradient(0deg, #6542FF 0%, #6542FF 100%), #000;box-shadow:0 0 20px 7.846px rgba(102, 0, 255, 0.30), 0 0 50px 7.846px rgba(102, 0, 255, 0.50)">
+                                <div class="w-full mb-6 rounded-2xl overflow-hidden bg-black relative"><img
+                                        src="images/images-asset_morphing.webp" alt="ASSET MORPHING"
+                                        class="w-full h-auto object-cover transition-opacity duration-300 opacity-100"><video
+                                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 "
+                                        muted="" loop="" playsinline="">
+                                        <source src="https://media.readyplayer.me/nexus/videos/asset_morphing_demo.mp4"
+                                            type="video/mp4">
+                                        </source>Your browser does not support the video tag.
+                                    </video></div>
+                                <div class="w-full flex flex-col items-center text-center">
+                                    <h3 class="font-raging text-5xl xl:text-7xl text-white mb-6">ASSET MORPHING</h3>
+                                    <p class="font-montreal text-lg lg:text-xl text-white mb-8 leading-relaxed">
+                                        Automatically fit assets to any avatar rig or topology without manual work.</p>
+                                </div>
+                            </div>
+                            <div class="p-6 relative flex flex-col justify-center items-start "
+                                style="border-radius:30px;background:linear-gradient(0deg, #6542FF 0%, #6542FF 100%), #000;box-shadow:0 0 20px 7.846px rgba(102, 0, 255, 0.30), 0 0 50px 7.846px rgba(102, 0, 255, 0.50)">
+                                <div class="w-full mb-6 rounded-2xl overflow-hidden bg-black relative"><img
+                                        src="images/images-shape3d.webp" alt="SHAPE 3D"
+                                        class="w-full h-auto object-cover transition-opacity duration-300 opacity-100"><video
+                                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 "
+                                        style="transform:scale(1.45) translateX(16%)" muted="" loop="" playsinline="">
+                                        <source src="https://media.readyplayer.me/nexus/videos/shape_3d_demo.mp4"
+                                            type="video/mp4">
+                                        </source>Your browser does not support the video tag.
+                                    </video></div>
+                                <div class="w-full flex flex-col items-center text-center">
+                                    <h3 class="font-raging text-5xl xl:text-7xl text-white mb-6">SHAPE 3D</h3>
+                                    <p class="font-montreal text-lg lg:text-xl text-white mb-8 leading-relaxed">Auto-rig
+                                        and convert custom 3D assets into usable clothing with a single click.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center"><button
+                                class="font-montreal text-base px-7 py-3 rounded-3xl border-white border text-white relative overflow-hidden transition-all duration-300 ease-out hover:pr-16 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 group cursor-pointer w-full max-w-[350px] mt-8 font-bold"
+                                data-analytics-name="tech_stack" data-analytics-subject="view_all"><span
+                                    class="relative"><span class="transition-all duration-300 ease-out">View
+                                        All</span><span
+                                        class="absolute right-[-50px] top-0 bottom-0 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="39" height="19"
+                                            viewbox="0 0 39 19" fill="none">
+                                            <g clip-path="url(#clip0_343_8939)">
+                                                <path d="M0.375 9.4375H38.1349" stroke="white" stroke-width="1.09164"
+                                                    stroke-miterlimit="10"></path>
+                                                <path
+                                                    d="M29.7734 18.328L38.2282 9.43787L29.7734 0.544922L38.2282 9.43787"
+                                                    stroke="white" stroke-width="1.09164" stroke-miterlimit="10"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_343_8939">
+                                                    <rect width="38.625" height="18.5923" fill="white"
+                                                        transform="translate(0.375 0.140625)"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg></span></span></button></div>
+                    </div>
+                </section>
+            </section>
+            <section class="mx-auto pb-16 md:pb-24"
+                style="background:linear-gradient(180deg, #000 0%, rgba(13, 14, 18, 0.00) 100%), #6542FF">
+                <div class="container m-auto px-4">
+                    <div class="flex justify-center flex-col items-center">
+                        <p class="font-montreal text-lg md:text-xl leading-6 md:leading-[30px] uppercase text-center">
+                            build your own</p>
+                        <h2 class="font-raging text-6xl md:text-7xl lg:text-8xl xl:text-[120px] 2xl:text-[185px] font-black uppercase leading-tight md:leading-[120px] xl:leading-[166px] text-center"
+                            style="font-feature-settings:'ss01' on;background:linear-gradient(180deg, #FFF 0%, #5C33FF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+                            avatar editor</h2>
+                    </div>
+                    <div class="relative w-full px-4 md:px-8 lg:px-16 max-w-full">
+                        <div class="relative w-full" style="aspect-ratio:1287/801"><video
+                                class="absolute inset-0 w-full h-full object-cover" muted="" loop="" playsinline=""
+                                preload="metadata"
+                                style="clip-path:polygon(0% 0%, 100% 10.86%, 100% 81.4%, 0% 100%);max-width:100%;height:100%">
+                                <source src="https://media.readyplayer.me/nexus/videos/Avatar%20editor.mp4"
+                                    type="video/mp4">
+                                </source>Your browser does not support the video tag.
+                            </video><svg class="absolute inset-0 w-full h-full pointer-events-none"
+                                viewbox="0 0 1287 801" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                preserveaspectratio="none">
+                                <defs>
+                                    <lineargradient id="paint0_linear" x1="643.5" y1="508.193" x2="643.5" y2="800.357"
+                                        gradientunits="userSpaceOnUse">
+                                        <stop stop-opacity="0"></stop>
+                                        <stop offset="1"></stop>
+                                    </lineargradient>
+                                    <lineargradient id="paint1_linear" x1="644" y1="66.5" x2="644" y2="175"
+                                        gradientunits="userSpaceOnUse">
+                                        <stop></stop>
+                                        <stop offset="1" stop-opacity="0"></stop>
+                                    </lineargradient>
+                                </defs>
+                                <path d="M0 0V800.357L1287 651.708V87L0 0Z" fill="url(#paint0_linear)"
+                                    style="mix-blend-mode:multiply"></path>
+                                <path d="M0 0V800.357L1287 651.708V87L0 0Z" fill="url(#paint1_linear)"
+                                    style="mix-blend-mode:multiply"></path>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm">
+                                <div
+                                    class="w-16 h-16 border-4 border-white/30 border-t-white rounded-full animate-spin">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full py-8 md:py-12" style="background:#6542FF">
+                <div class="w-[1px] h-32 md:h-64 m-auto" style="background:white"></div>
+            </section>
+            <section class="mx-auto py-16 md:py-24"
+                style="background:linear-gradient(0deg, #000 0%, rgba(13, 14, 18, 0.00) 100%), #6542FF">
+                <div class="container m-auto px-4">
+                    <div class="text-center mb-8 md:mb-12">
+                        <h4
+                            class="font-monument text-2xl md:text-3xl lg:text-[45px] text-white uppercase font-black leading-tight md:leading-[45px]">
+                            avatar creator tools </h4>
+                        <p class="font-montreal text-lg md:text-xl leading-6 md:leading-[28px]">Everything you need to
+                            build your own avatar creator</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+                        <div class="group perspective-1000 ">
+                            <div
+                                class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                                <div
+                                    class="flex flex-col inset-0 w-full h-full backface-hidden rounded-[30px] overflow-hidden bg-black shadow-xl">
+                                    <div class="relative flex justify-center"><img
+                                            src="images/images-dev-studio-flip.webp"
+                                            alt="Avatar Creation Studio Interface" class="object-cover"></div>
+                                    <div class="mt-auto p-6">
+                                        <div class="flex flex-col items-start gap-2 text-white">
+                                            <p class="font-montreal text-[18px] leading-[26px]">Back-office for avatar
+                                                creator</p>
+                                            <h3 class="font-raging text-[110px] leading-[0.7] uppercase">Dev Studio</h3>
+                                            <div class="normal-case font-montreal font-bold text-base px-7 py-3 mt-2 border-white border rounded-3xl cursor-pointer"
+                                                data-analytics-name="dev_studio" data-analytics-subject="more_info">More
+                                                info</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-black px-10 py-6 flex flex-col justify-between shadow-xl">
+                                    <div>
+                                        <h3 class="font-raging text-[96px] uppercase text-white mb-10 leading-[95px]">
+                                            Dev Studio</h3>
+                                        <h4
+                                            class="font-montreal text-md font-semibold text-gray-300 mb-10 leading-tight">
+                                            Advanced backend for your live avatar creator</h4>
+                                        <div class="font-montreal text-sm md:text-base text-white">
+                                            <p>Ready Player Me Studio is the most advanced backend that connects
+                                                directly with your cross-platform avatar integration, enabling:</p>
+                                            <ul class="mt-2 pl-4">
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Unified management of assets and editor
+                                                        live-operations.</span>
+                                                </li>
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Upload custom content directly to your avatar creator or
+                                                        select content from an extensive library.</span>
+                                                </li>
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Customize and configure the integration, editor theming
+                                                        and more.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div><button
+                                            class="font-montreal text-base px-7 py-3 border-white border rounded-3xl text-white transition-all duration-300 ease-out hover:bg-[#6542FF] hover:shadow-[0_0_79.6px_0_#3C2EFF,_0_0_26.533px_0_#6542FF] hover:border-[#6542FF] active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 cursor-pointer font-bold"
+                                            data-analytics-name="dev_studio" data-analytics-subject="learn_more">Learn
+                                            more</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group perspective-1000 ">
+                            <div
+                                class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                                <div
+                                    class="flex flex-col inset-0 w-full h-full backface-hidden rounded-[30px] overflow-hidden bg-black shadow-xl">
+                                    <div class="relative flex justify-center"><img src="images/images-sdk-flip.webp"
+                                            alt="Avatar Creation Studio Interface" class="object-cover"></div>
+                                    <div class="mt-auto p-6">
+                                        <div class="flex flex-col items-start gap-2 text-white">
+                                            <p class="font-montreal text-[18px] leading-[26px]">Build and manage avatar
+                                                creator</p>
+                                            <h3 class="font-raging text-[110px] leading-[0.7] uppercase">sdk &amp; API
+                                            </h3>
+                                            <div class="normal-case font-montreal font-bold text-base px-7 py-3 mt-2 border-white border rounded-3xl cursor-pointer"
+                                                data-analytics-name="sdk_api" data-analytics-subject="more_info">More
+                                                info</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-black px-10 py-6 flex flex-col justify-between shadow-xl">
+                                    <div>
+                                        <h3 class="font-raging text-[96px] uppercase text-white mb-10 leading-[95px]">
+                                            sdk &amp; API</h3>
+                                        <h4
+                                            class="font-montreal text-md font-semibold text-gray-300 mb-10 leading-tight">
+                                            Simple APIs and cross-platform open-source</h4>
+                                        <div class="font-montreal text-sm md:text-base text-white">
+                                            <p>Ready Player Me SDKs and Avatar API enable fully customizable
+                                                cross-platform avatar systems, supporting:</p>
+                                            <ul class="mt-2 pl-4">
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Embedding avatar creators directly into your game or app
+                                                        UI with full control over appearance and behavior.</span>
+                                                </li>
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Managing assets, linking user accounts, unlocking
+                                                        content, and supporting guest experiences through robust
+                                                        APIs.</span>
+                                                </li>
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Building fully bespoke avatar systems with SDKs for
+                                                        custom creators, optimized delivery, and deep engine</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div><button
+                                            class="font-montreal text-base px-7 py-3 border-white border rounded-3xl text-white transition-all duration-300 ease-out hover:bg-[#6542FF] hover:shadow-[0_0_79.6px_0_#3C2EFF,_0_0_26.533px_0_#6542FF] hover:border-[#6542FF] active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 cursor-pointer font-bold"
+                                            data-analytics-name="sdk_api" data-analytics-subject="learn_more">Learn
+                                            more</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group perspective-1000 ">
+                            <div
+                                class="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                                <div
+                                    class="flex flex-col inset-0 w-full h-full backface-hidden rounded-[30px] overflow-hidden bg-black shadow-xl">
+                                    <div class="relative flex justify-center"><img
+                                            src="images/images-ugc-tools-flip.webp"
+                                            alt="Avatar Creation Studio Interface" class="object-cover"></div>
+                                    <div class="mt-auto p-6">
+                                        <div class="flex flex-col items-start gap-2 text-white">
+                                            <p class="font-montreal text-[18px] leading-[26px]">AI-powered UGC tools</p>
+                                            <h3 class="font-raging text-[110px] leading-[0.7] uppercase">ugc tools</h3>
+                                            <div class="normal-case font-montreal font-bold text-base px-7 py-3 mt-2 border-white border rounded-3xl cursor-pointer"
+                                                data-analytics-name="ugc_tools" data-analytics-subject="more_info">More
+                                                info</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-black px-10 py-6 flex flex-col justify-between shadow-xl">
+                                    <div>
+                                        <h3 class="font-raging text-[96px] uppercase text-white mb-10 leading-[95px]">
+                                            ugc tools</h3>
+                                        <h4
+                                            class="font-montreal text-md font-semibold text-gray-300 mb-10 leading-tight">
+                                            AI-powered UGC tools for avatar content creation.</h4>
+                                        <div class="font-montreal text-sm md:text-base text-white">
+                                            <p>Give players and creators the ability to build and customize avatar
+                                                cosmetics using powerful AI tools. Ready Player Me&rsquo;s UGC tools
+                                                enable:</p>
+                                            <ul class="mt-2 pl-4">
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Creating avatar assets from reference images using AI
+                                                        generation.</span>
+                                                </li>
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Generating textures with AI that align perfectly to mesh
+                                                        geometry.</span>
+                                                </li>
+                                                <li class="flex items-start text-sm md:text-base">
+                                                    <div
+                                                        class="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0">
+                                                    </div><span>Mixing and matching ready-made assets from a rich
+                                                        catalog and personalizing them to your own style.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div><button
+                                            class="font-montreal text-base px-7 py-3 border-white border rounded-3xl text-white transition-all duration-300 ease-out hover:bg-[#6542FF] hover:shadow-[0_0_79.6px_0_#3C2EFF,_0_0_26.533px_0_#6542FF] hover:border-[#6542FF] active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 cursor-pointer font-bold"
+                                            data-analytics-name="ugc_tools" data-analytics-subject="learn_more">Learn
+                                            more</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full py-8 md:py-12" style="background:#000">
+                <div class="w-[1px] h-32 md:h-64 m-auto" style="background:white"></div>
+            </section>
+            <section class="mx-auto py-16 md:py-24"
+                style="background:radial-gradient(48.62% 45.53% at 118.91% 41.61%, #6542FF 0%, #000 100%), radial-gradient(43.82% 47.01% at -22.63% 51.19%, #6542FF 0%, #000 100%);background-blend-mode:screen, screen, normal">
+                <div class="container m-auto px-4">
+                    <div class="text-center">
+                        <h4
+                            class="font-monument text-2xl md:text-3xl lg:text-[45px] text-white uppercase font-black leading-tight md:leading-[45px]">
+                            built with</h4>
+                        <h1 class="font-raging text-6xl md:text-7xl lg:text-8xl xl:text-[120px] 2xl:text-[185px] font-black leading-tight md:leading-[120px] xl:leading-[166px] uppercase text-transparent"
+                            style="font-feature-settings:'ss01' on;background:linear-gradient(180deg, #FFF -27.86%, #5C33FF 99.8%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+                            ready player me</h1>
+                    </div>
+                    <div class="m-auto mt-12 md:mt-24 w-full max-w-[1185px] aspect-video bg-black">
+                        <div class="relative w-full rounded-2xl overflow-hidden bg-black shadow-2xl cursor-pointer ">
+                            <video class="w-full h-auto object-cover" preload="metadata" playsinline=""
+                                style="aspect-ratio:16/9">
+                                <source src="https://media.readyplayer.me/nexus/videos/demo_reel.mp4" type="video/mp4">
+                                </source>Your browser does not support the video tag.
+                            </video>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center transition-all duration-300 opacity-100">
+                                <button
+                                    class="group relative w-20 h-20 bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 hover:bg-black/80 hover:scale-110 border-2 border-white"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-play w-8 h-8 text-white ml-1 transition-transform duration-200 group-hover:scale-110">
+                                        <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                                    </svg>
+                                    <div
+                                        class="absolute inset-0 rounded-full bg-white/20 scale-0 group-active:scale-100 transition-transform duration-200">
+                                    </div>
+                                </button></div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/30 pointer-events-none transition-opacity duration-300 opacity-100">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+                                <div
+                                    class="w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full py-8 md:py-12" style="background:#000">
+                <div class="w-[1px] h-32 md:h-64 m-auto" style="background:white"></div>
+            </section>
+            <section class="mx-auto py-24"
+                style="background:#000;background-image:url('https://media.readyplayer.me/webpage/images/webapge-background-end.svg');background-position:bottom center;background-size:cover">
+                <div class="container m-auto px-4">
+                    <div class="text-center m-auto max-w-[877px]">
+                        <p class="text-center font-montreal text-base md:text-[20px] font-medium leading-6 md:leading-[30px] uppercase text-transparent"
+                            style="background:linear-gradient(180deg, #FFF -27.86%, #5C33FF 99.8%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal">
+                            Join thousands of developers</p>
+                        <h1 class="my-6 md:my-10 font-raging text-7xl md:text-8xl lg:text-[120px] xl:text-[185px] font-black leading-tight md:leading-[120px] xl:leading-[166px] uppercase text-white"
+                            style="font-feature-settings:'ss01' on">Powering the future of avatars.</h1>
+                        <div class="flex justify-center"><button
+                                class="font-montreal text-base px-7 py-3 rounded-3xl bg-[#6542FF] text-white relative overflow-hidden transition-all duration-300 ease-out hover:shadow-[0_0_79.6px_0_#3C2EFF,_0_0_26.533px_0_#6542FF] hover:pr-16 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 group cursor-pointer w-full max-w-sm font-bold"
+                                data-analytics-name="bottom_banner" data-analytics-subject="sign_up_now"><span
+                                    class="relative"><span class="transition-all duration-300 ease-out">Sign up
+                                        now</span><span
+                                        class="absolute right-[-50px] top-0 bottom-0 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="39" height="19"
+                                            viewbox="0 0 39 19" fill="none">
+                                            <g clip-path="url(#clip0_343_8939)">
+                                                <path d="M0.375 9.4375H38.1349" stroke="white" stroke-width="1.09164"
+                                                    stroke-miterlimit="10"></path>
+                                                <path
+                                                    d="M29.7734 18.328L38.2282 9.43787L29.7734 0.544922L38.2282 9.43787"
+                                                    stroke="white" stroke-width="1.09164" stroke-miterlimit="10"></path>
+                                            </g>
+                                            <defs>
+                                                <clippath id="clip0_343_8939">
+                                                    <rect width="38.625" height="18.5923" fill="white"
+                                                        transform="translate(0.375 0.140625)"></rect>
+                                                </clippath>
+                                            </defs>
+                                        </svg></span></span></button></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-black py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-8 mb-16">
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2 md:mb-6" style="color:#C4C5CC">Products</h4>
+                        <ul class="space-y-2 md:space-y-4">
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="developer_studio"
+                                    href="developer-studio.html">Developer Studio</a></li>
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="avatar_creator"
+                                    href="avatar-creation.html">Avatar Creator</a></li>
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="avatar_portability"
+                                    href="interoperability.html">Avatar Portability</a></li>
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="aipowered_ugc_tools"
+                                    href="ugc-tools.html">AI-powered UGC tools</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2 md:mb-6" style="color:#C4C5CC">Developers</h4>
+                        <ul class="space-y-2 md:space-y-4">
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="documentation"
+                                    target="_blank" rel="noopener noreferrer"
+                                    href="https://docs.readyplayer.me/">Documentation</a></li>
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="forums" target="_blank"
+                                    rel="noopener noreferrer" href="https://forum.readyplayer.me/">Forums</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2 md:mb-6" style="color:#C4C5CC">Resources</h4>
+                        <ul class="space-y-2 md:space-y-4">
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="about_us"
+                                    href="about-us.html">About us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2 md:mb-6" style="color:#C4C5CC">Socials</h4>
+                        <ul class="space-y-2 md:space-y-4">
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="x" target="_blank"
+                                    rel="noopener noreferrer" href="https://x.com/readyplayerme">X</a></li>
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="linkedin" target="_blank"
+                                    rel="noopener noreferrer"
+                                    href="https://ee.linkedin.com/company/readyplayerme">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-2 md:mb-6" style="color:#C4C5CC">Legal</h4>
+                        <ul class="space-y-2 md:space-y-4">
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="terms_of_use"
+                                    href="terms.html">Terms of use</a></li>
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="privacy_policy"
+                                    href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a class="text-white hover:text-gray-300 transition-colors text-base"
+                                    data-analytics-name="page_footer" data-analytics-subject="cookie_policy"
+                                    href="cookies.html">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-left mb-12">
+                    <div class="text-sm"><span class="text-gray-400">Some assets on our website are provided by our
+                            partners.</span><span class="ml-2.5"><a class="text-gray-100"
+                                href="https://adidas.com">Adidas</a>/<a class="text-gray-100 mx-1.5"
+                                href="https://walkerworld.io/">Walker World</a>/<a class="text-gray-100"
+                                href="https://jam3.com">Jam3</a></span></div>
+                </div>
+                <div class="flex justify-between border-t border-gray-700 pt-8">
+                    <div class="flex-shrink-0"><a aria-label="home" data-analytics-name="page_header"
+                            data-analytics-subject="home" href="readyplayer.html"><img class="w-[80px]" loading="lazy"
+                                src="images/images-rpm-logo.svg" alt="Ready Player Me"></a></div>
+                    <p class="self-center text-gray-200 text-right">&copy;<!-- -->2025<!-- --> Ready Player Me. All
+                        rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/chunks-webpack-0acd0d82b5d35d56.js" async=""></script>
+    <script>(self.__next_f = self.__next_f || []).push([0])</script>
+    <script>self.__next_f.push([1, "1:\"$Sreact.fragment\"\n2:I[9352,[\"626\",\"static/chunks/626-f5cf4424f3949de0.js\",\"177\",\"static/chunks/app/layout-4981e721e0bea805.js\"],\"AnalyticsProvider\"]\n3:I[7555,[],\"\"]\n4:I[1295,[],\"\"]\n5:I[894,[],\"ClientPageRoot\"]\n6:I[4485,[\"728\",\"static/chunks/728-b899684efdf099ae.js\",\"626\",\"static/chunks/626-f5cf4424f3949de0.js\",\"63\",\"static/chunks/63-dbc69ed7d4eb29ad.js\",\"685\",\"static/chunks/685-425896b0d1041d38.js\",\"974\",\"static/chunks/app/page-dcd3b047ece5371e.js\"],\"default\"]\n9:I[9665,[],\"OutletBoundary\"]\nc:I[9665,[],\"ViewportBoundary\"]\ne:I[9665,[],\"MetadataBoundary\"]\n10:I[6614,[],\"\"]\n:HL[\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/d97aee4014f44f6b.css\",\"style\"]\n"])</script>
+    <script>self.__next_f.push([1, "0:{\"P\":null,\"b\":\"06pY1Nu_lJzpIq8pkcykX\",\"p\":\"\",\"c\":[\"\",\"\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/d97aee4014f44f6b.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__className_e8ce0c bg-black text-white\",\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L5\",null,{\"Component\":\"$6\",\"searchParams\":{},\"params\":{},\"promises\":[\"$@7\",\"$@8\"]}],\"$undefined\",null,[\"$\",\"$L9\",null,{\"children\":[\"$La\",\"$Lb\",null]}]]}],{},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"s36XOaZIuJuUorvF6-0CG\",{\"children\":[[\"$\",\"$Lc\",null,{\"children\":\"$Ld\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],[\"$\",\"$Le\",null,{\"children\":\"$Lf\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$10\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script>
+    <script>self.__next_f.push([1, "7:{}\n8:{}\n"])</script>
+    <script>self.__next_f.push([1, "d:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\na:null\n"])</script>
+    <script>self.__next_f.push([1, "b:null\n"])</script>
+    <script>self.__next_f.push([1, "f:[[\"$\",\"title\",\"0\",{\"children\":\"Integrate an avatar creator into your game in days - Ready Player Me\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.\"}],[\"$\",\"meta\",\"2\",{\"property\":\"og:title\",\"content\":\"Integrate an avatar creator into your game in days - Ready Player Me\"}],[\"$\",\"meta\",\"3\",{\"property\":\"og:description\",\"content\":\"Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.\"}],[\"$\",\"meta\",\"4\",{\"property\":\"og:image\",\"content\":\"https://cdn.prod.website-files.com/647798cf71ec2048ea89ab07/64906dc72429f7d76d3e08ff_RPM_OG_IMG_1200x630.png\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:image:height\",\"content\":\"630\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"8\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"9\",{\"name\":\"twitter:title\",\"content\":\"Integrate an avatar creator into your game in days - Ready Player Me\"}],[\"$\",\"meta\",\"10\",{\"name\":\"twitter:description\",\"content\":\"Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.\"}],[\"$\",\"meta\",\"11\",{\"name\":\"twitter:image\",\"content\":\"https://cdn.prod.website-files.com/647798cf71ec2048ea89ab07/64906dc72429f7d76d3e08ff_RPM_OG_IMG_1200x630.png\"}],[\"$\",\"link\",\"12\",{\"rel\":\"shortcut icon\",\"href\":\"/favicon.ico\"}],[\"$\",\"link\",\"13\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"sizes\":\"any\"}],[\"$\",\"link\",\"14\",{\"rel\":\"icon\",\"href\":\"/favicon.svg\",\"sizes\":\"any\",\"type\":\"image/svg+xml\"}],[\"$\",\"link\",\"15\",{\"rel\":\"icon\",\"href\":\"/favicon-16x16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"16\",{\"rel\":\"icon\",\"href\":\"/favicon-48x48.ico\",\"sizes\":\"48x48\",\"type\":\"image/png\"}],[\"$\",\"link\",\"17\",{\"rel\":\"icon\",\"href\":\"/favicon-96x96.png\",\"sizes\":\"96x96\",\"type\":\"image/png\"}],[\"$\",\"link\",\"18\",{\"rel\":\"apple-touch-icon\",\"href\":\"/favicon-16x16.png\"}]]\n"])</script>
+</body>
+
+</html>

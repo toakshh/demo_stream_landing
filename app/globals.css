@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font faces */
+@font-face {
+  font-family: 'Raging';
+  src: url('/fonts/fonts-Raging-Regular.woff') format('woff');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raging';
+  src: url('/fonts/fonts-Raging-Bold.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raging';
+  src: url('/fonts/fonts-Raging-Black.woff') format('woff');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Monument Extended';
+  src: url('https://media.readyplayer.me/nexus/fonts/PPMonumentExtended-Black-BF645465a1e687b.otf') format('opentype');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('https://media.readyplayer.me/nexus/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('https://media.readyplayer.me/nexus/fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(180deg, #FFF -27.86%, #5C33FF 99.8%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 
+      0 0 250px rgba(235, 51, 255, 0.44), 
+      0 0 31px rgba(154, 66, 255, 0.44), 
+      0 0 250px rgba(157, 66, 255, 0.80), 
+      0 0 50px rgba(167, 66, 255, 0.40), 
+      0 0 44.9px rgba(101, 66, 255, 0.44);
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  .group:hover .group-hover\:rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
