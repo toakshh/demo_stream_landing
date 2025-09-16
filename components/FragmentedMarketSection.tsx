@@ -19,19 +19,18 @@ export default function FragmentedMarketSection() {
         <div className="md:absolute md:inset-0 flex flex-col justify-center items-center px-4 py-12 md:py-0">
           <div className="text-center mx-auto max-w-5xl">
             <h2 
-              className="font-raging text-[clamp(3.5rem,15vw,6.25rem)] 2xl:text-[185px] text-[#6542FF] uppercase leading-tight md:leading-[120px] xl:leading-[166px] mb-4 md:mb-6"
+              className="font-raging text-[clamp(3.5rem,15vw,6.25rem)] 2xl:text-[185px] text-[#db21bc] uppercase leading-tight md:leading-[120px] xl:leading-[166px] mb-4 md:mb-6"
               style={{ fontFeatureSettings: "'ss01' on" }}
             >
-              a fragmented market
+              streaming evolved
             </h2>
             
             <p className="max-w-[854px] mx-auto text-center justify-center text-black text-sm md:text-lg lg:text-xl font-normal font-montreal leading-6 md:leading-7">
-              Every game is different - different engines, devices, standards, and art styles. Moving
-              avatars and assets between them is complex: rigs, animations, level of detail, and
-              performance budgets rarely align. Ready Player Me solves this with infrastructure designed
-              for interoperability. Our technology handles translation, optimization, and delivery across
-              engines, platforms, and formats - ensuring avatars and assets perform consistently, look
-              great, and fit seamlessly into any experience.
+              Content creation is more competitive than ever - different platforms, audiences, and engagement strategies. 
+              Standing out requires more than just gameplay: you need personality, interaction, and entertainment value. 
+              Ultron Stream solves this with AI companions designed for modern streaming. Our technology delivers 
+              real-time commentary, audience engagement, and co-streaming features - ensuring your content stays 
+              fresh, interactive, and entertaining across all platforms.
             </p>
           </div>
         </div>

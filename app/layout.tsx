@@ -4,23 +4,23 @@ import { cn } from '@/lib/utils'
 import StructuredData from '@/components/StructuredData'
 
 export const metadata: Metadata = {
-    title: 'Integrate an avatar creator into your game in days - Ready Player Me',
-    description: 'Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.',
-    keywords: ['avatars', 'gaming', 'Ready Player Me', 'cross-game avatars', 'avatar creator', 'game development'],
-    authors: [{ name: 'Ready Player Me' }],
-    creator: 'Ready Player Me',
-    publisher: 'Ready Player Me',
+    title: 'AI-Powered Streaming Companions - Ultron Stream',
+    description: 'Transform your streams with AI-powered companion characters. Get real-time commentary, audience interaction, and entertainment features that boost engagement.',
+    keywords: ['AI streaming', 'streaming companions', 'Ultron Stream', 'AI characters', 'streaming tools', 'content creation'],
+    authors: [{ name: 'Ultron Stream' }],
+    creator: 'Ultron Stream',
+    publisher: 'Ultron Stream',
     openGraph: {
-        title: 'Integrate an avatar creator into your game in days - Ready Player Me',
-        description: 'Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.',
-        url: 'https://readyplayer.me',
-        siteName: 'Ready Player Me',
+        title: 'AI-Powered Streaming Companions - Ultron Stream',
+        description: 'Transform your streams with AI-powered companion characters. Get real-time commentary, audience interaction, and entertainment features that boost engagement.',
+        url: 'https://ultronstream.com',
+        siteName: 'Ultron Stream',
         images: [
             {
-                url: 'https://cdn.prod.website-files.com/647798cf71ec2048ea89ab07/64906dc72429f7d76d3e08ff_RPM_OG_IMG_1200x630.png',
+                url: 'https://ultronstream.com/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'Ready Player Me - Cross-game avatars made easy',
+                alt: 'Ultron Stream - AI-Powered Streaming Companions',
             },
         ],
         locale: 'en_US',
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Integrate an avatar creator into your game in days - Ready Player Me',
-        description: 'Thousands of companies use Ready Player Me developer tools to give their users high-quality personalized avatars that increase retention and engagement.',
-        images: ['https://cdn.prod.website-files.com/647798cf71ec2048ea89ab07/64906dc72429f7d76d3e08ff_RPM_OG_IMG_1200x630.png'],
+        title: 'AI-Powered Streaming Companions - Ultron Stream',
+        description: 'Transform your streams with AI-powered companion characters. Get real-time commentary, audience interaction, and entertainment features that boost engagement.',
+        images: ['https://ultronstream.com/og-image.png'],
     },
     robots: {
         index: true,

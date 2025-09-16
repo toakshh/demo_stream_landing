@@ -13,11 +13,19 @@ export default function TrustedBySection() {
   return (
     <section className="w-full pt-16 md:pt-24 pb-16 md:pb-24 bg-black">
       <div className="container text-center mx-auto px-4">
-        <h2 className="font-monument font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl uppercase leading-tight md:leading-[73px] text-gradient">
-          We&apos;ve been building avatars for 10+ years
+        <h2 
+          className="font-monument font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl uppercase leading-tight md:leading-[73px]"
+          style={{
+            background: 'linear-gradient(180deg, #FFF -27.86%, #db21bc 99.8%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
+        >
+          Powering the future of streaming for 2+ years
         </h2>
         <p className="font-montreal text-lg md:text-xl uppercase text-white mt-6 md:mt-10">
-          Trusted by 25000+ developers
+          Trusted by 50,000+ content creators worldwide
         </p>
       </div>
       

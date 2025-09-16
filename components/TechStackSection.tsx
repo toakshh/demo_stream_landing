@@ -2,22 +2,22 @@ import Image from 'next/image'
 
 const techStackItems = [
   {
-    title: "Restyle",
-    description: "Transform any avatar to match your game's art style with AI-powered restyling technology.",
+    title: "Smart Commentary",
+    description: "AI-powered real-time commentary that analyzes gameplay and provides engaging insights.",
     image: "/images/images-restyle.webp",
-    features: ["AI-powered style transfer", "Maintains avatar identity", "Real-time processing"]
+    features: ["Real-time game analysis", "Contextual commentary", "Personality customization"]
   },
   {
-    title: "Asset Morphing", 
-    description: "Seamlessly adapt assets between different game engines and platforms.",
+    title: "Audience Interaction", 
+    description: "Intelligent chat response system that engages with your audience automatically.",
     image: "/images/images-asset_morphing.webp",
-    features: ["Cross-platform compatibility", "Automatic optimization", "Format conversion"]
+    features: ["Auto chat responses", "Sentiment analysis", "Engagement tracking"]
   },
   {
-    title: "Shape3D",
-    description: "Advanced 3D shape manipulation and optimization for avatars and assets.",
+    title: "Co-Stream AI",
+    description: "Advanced AI companion that acts as your streaming partner and entertainment co-host.",
     image: "/images/images-shape3d.webp", 
-    features: ["3D mesh optimization", "LOD generation", "Performance tuning"]
+    features: ["Dynamic personality", "Interactive storytelling", "Viewer participation"]
   }
 ]
 
@@ -36,13 +36,13 @@ export default function TechStackSection() {
             className="block text-transparent font-raging text-[clamp(3.5rem,15vw,6.25rem)] uppercase leading-tight"
             style={{ 
               fontFeatureSettings: "'ss01' on",
-              background: "linear-gradient(180deg, #FFF 0%, #5C33FF 100%)",
+              background: "linear-gradient(180deg, #FFF 0%, #db21bc 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text"
             }}
           >
-            AI POWERED TECH stack
+            AI STREAMING TECH stack
           </h2>
         </div>
         
@@ -75,7 +75,7 @@ export default function TechStackSection() {
                             </p>
                           </div>
                           <div className="mt-4">
-                            <button className="text-[#6542FF] hover:text-white transition-colors text-sm font-medium">
+                            <button className="text-[#db21bc] hover:text-white transition-colors text-sm font-medium">
                               Learn more →
                             </button>
                           </div>
@@ -84,7 +84,7 @@ export default function TechStackSection() {
                     </div>
                     
                     {/* Back of card */}
-                    <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-[#6542FF] to-purple-800 border border-purple-400/20">
+                    <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl bg-gradient-to-br from-[#db21bc] to-pink-800 border border-pink-400/20">
                       <div className="p-6 h-full flex flex-col justify-center">
                         <h3 className="text-xl font-bold text-white mb-4 font-monument uppercase">
                           {item.title} Features
@@ -97,8 +97,8 @@ export default function TechStackSection() {
                             </li>
                           ))}
                         </ul>
-                        <button className="mt-6 px-4 py-2 bg-white text-[#6542FF] rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">
-                          Get Started
+                        <button className="mt-6 px-4 py-2 bg-white text-[#db21bc] rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">
+                          Try Now
                         </button>
                       </div>
                     </div>

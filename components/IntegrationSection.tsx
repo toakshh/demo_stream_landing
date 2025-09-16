@@ -3,39 +3,44 @@ import { Code, Gamepad2, Smartphone, Globe } from 'lucide-react'
 const integrationExamples = [
   {
     icon: <Gamepad2 className="w-8 h-8" />,
-    title: "Unity Integration",
-    description: "Get started with our Unity SDK in minutes",
-    code: `// Initialize Ready Player Me
-var avatarLoader = new AvatarLoader();
-avatarLoader.LoadAvatar(avatarUrl);`,
-    platform: "Unity"
+    title: "OBS Studio Plugin",
+    description: "Get started with our OBS plugin in minutes",
+    code: `// Initialize Ultron Stream
+const ultronAI = new UltronCompanion();
+ultronAI.startStream({
+  personality: 'gaming',
+  voice: 'energetic'
+});`,
+    platform: "OBS Studio"
   },
   {
     icon: <Code className="w-8 h-8" />,
-    title: "Unreal Engine",
-    description: "Native Unreal Engine plugin for seamless integration",
-    code: `// Load avatar in Unreal
-UReadyPlayerMeComponent* RPMComponent;
-RPMComponent->LoadAvatar(AvatarURL);`,
-    platform: "Unreal"
+    title: "Twitch Integration",
+    description: "Native Twitch bot integration for chat interaction",
+    code: `// Connect to Twitch chat
+const twitchBot = new UltronTwitchBot();
+twitchBot.enableChatResponses();
+twitchBot.startCommentary();`,
+    platform: "Twitch"
   },
   {
     icon: <Smartphone className="w-8 h-8" />,
-    title: "React Native",
-    description: "Cross-platform mobile avatar integration",
-    code: `// React Native implementation
-import { AvatarCreator } from '@readyplayerme/react-native';
-<AvatarCreator onAvatarExported={handleAvatar} />`,
-    platform: "React Native"
+    title: "Mobile Streaming",
+    description: "Cross-platform mobile streaming companion",
+    code: `// Mobile streaming setup
+import { UltronMobile } from '@ultronstream/mobile';
+const companion = new UltronMobile();
+companion.startMobileStream();`,
+    platform: "Mobile"
   },
   {
     icon: <Globe className="w-8 h-8" />,
-    title: "Web Integration",
-    description: "JavaScript SDK for web applications",
-    code: `// Web SDK usage
-import { Avatar } from '@readyplayerme/visage';
-const avatar = new Avatar(avatarUrl);
-avatar.render(canvas);`,
+    title: "Web Dashboard",
+    description: "Browser-based control panel for stream management",
+    code: `// Web dashboard integration
+import { UltronDashboard } from '@ultronstream/web';
+const dashboard = new UltronDashboard();
+dashboard.connectToStream(streamKey);`,
     platform: "Web"
   }
 ]
@@ -46,7 +51,7 @@ export default function IntegrationSection() {
       <section 
         className="mx-auto py-16 md:py-24"
         style={{
-          background: "linear-gradient(0deg, #000 0%, rgba(13, 14, 18, 0.00) 100%), #6542FF"
+          background: "linear-gradient(0deg, #000 0%, rgba(13, 14, 18, 0.00) 100%), #db21bc"
         }}
       >
         <div className="container m-auto px-4">
@@ -55,10 +60,10 @@ export default function IntegrationSection() {
               className="font-raging text-[clamp(3.5rem,15vw,6.25rem)] uppercase leading-tight text-white mb-6"
               style={{ fontFeatureSettings: "'ss01' on" }}
             >
-              Easy Integration
+              Easy Setup
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto font-montreal">
-              Start building with Ready Player Me in your preferred platform
+              Start streaming with Ultron AI companions on your preferred platform
             </p>
           </div>
           
@@ -94,7 +99,7 @@ export default function IntegrationSection() {
                     </div>
                     
                     <div className="mt-4 flex gap-3">
-                      <button className="flex-1 px-4 py-2 bg-white text-[#6542FF] rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">
+                      <button className="flex-1 px-4 py-2 bg-white text-[#db21bc] rounded-lg font-medium text-sm hover:bg-gray-100 transition-colors">
                         View Docs
                       </button>
                       <button className="px-4 py-2 border border-white/20 text-white rounded-lg font-medium text-sm hover:bg-white/10 transition-colors">
@@ -108,7 +113,7 @@ export default function IntegrationSection() {
           </div>
           
           <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-white text-[#6542FF] rounded-full font-medium text-lg hover:bg-gray-100 transition-colors">
+            <button className="px-8 py-3 bg-white text-[#db21bc] rounded-full font-medium text-lg hover:bg-gray-100 transition-colors">
               View All Documentation
             </button>
           </div>

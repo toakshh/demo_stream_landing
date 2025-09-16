@@ -2,26 +2,32 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const footerLinks = {
-  products: [
-    { name: 'Developer Studio', href: '/developer-studio' },
-    { name: 'Avatar Creator', href: '/avatar-creation' },
-    { name: 'Avatar Portability', href: '/interoperability' },
-    { name: 'AI-powered UGC tools', href: '/ugc-tools' }
+  features: [
+    { name: 'AI Companions', href: '/ai-companions' },
+    { name: 'Stream Studio', href: '/stream-studio' },
+    { name: 'Platform Integration', href: '/integrations' },
+    { name: 'Creator Tools', href: '/creator-tools' }
   ],
-  developers: [
-    { name: 'Documentation', href: 'https://docs.readyplayer.me/', external: true },
-    { name: 'Forums', href: 'https://forum.readyplayer.me/', external: true }
+  creators: [
+    { name: 'Documentation', href: 'https://docs.ultronstream.com/', external: true },
+    { name: 'Community', href: 'https://community.ultronstream.com/', external: true },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'API Reference', href: '/api' }
   ],
   company: [
-    { name: 'About us', href: '/about-us' }
+    { name: 'About us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' }
   ],
   social: [
-    { name: 'X', href: 'https://x.com/readyplayerme', external: true },
-    { name: 'LinkedIn', href: 'https://ee.linkedin.com/company/readyplayerme', external: true }
+    { name: 'X', href: 'https://x.com/ultronstream', external: true },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ultronstream', external: true },
+    { name: 'Discord', href: 'https://discord.gg/ultronstream', external: true },
+    { name: 'YouTube', href: 'https://youtube.com/@ultronstream', external: true }
   ],
   legal: [
-    { name: 'Terms of use', href: '/terms' },
-    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Cookie Policy', href: '/cookies' }
   ]
 }
@@ -31,11 +37,11 @@ export default function Footer() {
     <footer className="bg-black py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-8 mb-16">
-          {/* Products */}
+          {/* Features */}
           <div>
-            <h3 className="text-white font-semibold mb-4 font-montreal uppercase">Products</h3>
+            <h3 className="text-white font-semibold mb-4 font-montreal uppercase">Features</h3>
             <ul className="space-y-2 md:space-y-4">
-              {footerLinks.products.map((link) => (
+              {footerLinks.features.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
@@ -48,11 +54,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Developers */}
+          {/* Creators */}
           <div>
-            <h3 className="text-white font-semibold mb-4 font-montreal uppercase">Developers</h3>
+            <h3 className="text-white font-semibold mb-4 font-montreal uppercase">Creators</h3>
             <ul className="space-y-2 md:space-y-4">
-              {footerLinks.developers.map((link) => (
+              {footerLinks.creators.map((link) => (
                 <li key={link.name}>
                   {link.external ? (
                     <a
@@ -135,17 +141,13 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <Link href="/" className="block">
-                <Image
-                  src="/images/images-rpm-logo.svg"
-                  alt="Ready Player Me"
-                  width={150}
-                  height={30}
-                  className="h-8 w-auto"
-                />
+                <div className="text-xl font-bold text-white font-monument">
+                  <span className="text-[#db21bc]">ULTRON</span> STREAM
+                </div>
               </Link>
             </div>
             <div className="text-white/60 text-sm font-montreal">
-              © {new Date().getFullYear()} Ready Player Me. All rights reserved.
+              © {new Date().getFullYear()} Ultron Stream. All rights reserved.
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
-# Ready Player Me - Next.js SEO Optimized Website
+# Ultron Stream - Next.js SEO Optimized Website
 
-A modern, SEO-optimized Next.js application converted from the original Ready Player Me website with enhanced performance, accessibility, and search engine optimization.
+A modern, SEO-optimized Next.js application for Ultron Stream's AI-powered streaming companion platform with enhanced performance, accessibility, and search engine optimization.
 
 ## Features
 
@@ -34,7 +34,7 @@ A modern, SEO-optimized Next.js application converted from the original Ready Pl
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd ready-player-me-nextjs
+cd ultron-stream-nextjs
 ```
 
 2. Install dependencies:

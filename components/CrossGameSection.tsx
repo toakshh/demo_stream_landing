@@ -37,7 +37,7 @@ export default function CrossGameSection() {
             <div className="relative lg:order-2">
               <div className="pl-4 md:pl-8 flex flex-col gap-4 md:gap-6">
                 <p className="font-montreal uppercase text-lg md:text-xl">
-                  your avatar, your identity, any game
+                  AI companions, real engagement, any platform
                 </p>
                 
                 <div 
@@ -48,25 +48,31 @@ export default function CrossGameSection() {
                     letterSpacing: 'normal'
                   }}
                 >
-                  <h2 className="text-[clamp(2.5rem,15vw,6.25rem)]">cross-game avatars</h2>
+                  <h2 className="text-[clamp(2.5rem,15vw,6.25rem)]">intelligent streaming</h2>
                   <h2 
-                    className="text-[clamp(3.5rem,15vw,6.25rem)] text-gradient"
-                    style={{ lineHeight: '0.8' }}
+                    className="text-[clamp(3.5rem,15vw,6.25rem)]"
+                    style={{ 
+                      lineHeight: '0.8',
+                      background: 'linear-gradient(180deg, #FFF -27.86%, #db21bc 99.8%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}
                   >
-                    made easy.
+                    made simple.
                   </h2>
                 </div>
                 
                 <p className="font-montreal text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
-                  Ready Player Me provides developers with the tools and infrastructure to power
-                  cross-game avatars, build fully customizable avatar creators, and unlock new ways to
-                  engage and monetize players.
+                  Ultron Stream provides content creators with AI-powered companion characters that deliver
+                  real-time commentary, audience interaction, and entertainment features that transform
+                  ordinary streams into engaging experiences.
                 </p>
                 
                 <div>
-                  <button className="font-montreal text-base px-7 py-3 rounded-3xl border-white border text-white font-medium relative overflow-hidden transition-all duration-300 ease-out hover:pr-16 focus:outline-none focus:ring-2 focus:ring-[#6542FF] focus:ring-opacity-50 group cursor-pointer">
+                  <button className="font-montreal text-base px-7 py-3 rounded-3xl border-white border text-white font-medium relative overflow-hidden transition-all duration-300 ease-out hover:pr-16 focus:outline-none focus:ring-2 focus:ring-[#db21bc] focus:ring-opacity-50 group cursor-pointer">
                     <span className="relative">
-                      <span className="transition-all duration-300 ease-out">Try the demo</span>
+                      <span className="transition-all duration-300 ease-out">Watch Demo</span>
                       <span className="absolute right-[-50px] top-0 bottom-0 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 flex items-center">
                         <ArrowRight className="h-5 w-5 ml-2" />
                       </span>

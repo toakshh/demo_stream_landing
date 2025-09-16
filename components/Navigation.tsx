@@ -14,14 +14,9 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" aria-label="home" className="block">
-              <Image
-                src="/images/images-rpm-logo.svg"
-                alt="Ready Player Me"
-                width={200}
-                height={40}
-                className="h-8 w-auto"
-                priority
-              />
+              <div className="text-2xl font-bold text-white font-monument">
+                <span className="text-[#db21bc]">ULTRON</span> STREAM
+              </div>
             </Link>
           </div>
           
@@ -30,29 +25,27 @@ export default function Navigation() {
               <div className="flex items-center gap-2">
                 <div className="relative px-3.5 group">
                   <button className="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium cursor-pointer">
-                    <span>Products</span>
+                    <span>Features</span>
                     <ChevronDown className="h-4 w-4 transition-transform" />
                   </button>
                 </div>
                 <div className="relative px-3.5 group">
                   <button className="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium cursor-pointer">
-                    <span>Developers</span>
+                    <span>Creators</span>
                     <ChevronDown className="h-4 w-4 transition-transform" />
                   </button>
                 </div>
                 <div className="relative px-3.5 group">
                   <Link
-                    href="https://forum.readyplayer.me/"
+                    href="/community"
                     className="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
-                    <span>Forums</span>
+                    <span>Community</span>
                   </Link>
                 </div>
                 <div className="relative px-3.5 group">
                   <button className="flex items-center space-x-1 text-white hover:text-gray-300 transition-colors text-sm font-medium cursor-pointer">
-                    <span>Resources</span>
+                    <span>Support</span>
                     <ChevronDown className="h-4 w-4 transition-transform" />
                   </button>
                 </div>
@@ -63,9 +56,9 @@ export default function Navigation() {
           <div className="hidden lg:block">
             <button
               className="px-6 py-2 text-white font-medium text-sm rounded-full transition-all duration-300 hover:opacity-90"
-              style={{ background: '#6542FF' }}
+              style={{ background: '#db21bc' }}
             >
-              Log in
+              Start Streaming
             </button>
           </div>
           
@@ -86,27 +79,25 @@ export default function Navigation() {
         <div className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-white/10">
           <div className="px-4 py-6 space-y-4">
             <button className="block w-full text-left text-white hover:text-gray-300 transition-colors text-sm font-medium py-2">
-              Products
+              Features
             </button>
             <button className="block w-full text-left text-white hover:text-gray-300 transition-colors text-sm font-medium py-2">
-              Developers
+              Creators
             </button>
             <Link
-              href="https://forum.readyplayer.me/"
+              href="/community"
               className="block text-white hover:text-gray-300 transition-colors text-sm font-medium py-2"
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              Forums
+              Community
             </Link>
             <button className="block w-full text-left text-white hover:text-gray-300 transition-colors text-sm font-medium py-2">
-              Resources
+              Support
             </button>
             <button
               className="w-full px-6 py-2 text-white font-medium text-sm rounded-full transition-all duration-300 hover:opacity-90 mt-4"
-              style={{ background: '#6542FF' }}
+              style={{ background: '#db21bc' }}
             >
-              Log in
+              Start Streaming
             </button>
           </div>
         </div>

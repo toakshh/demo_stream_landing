@@ -20,7 +20,7 @@ export default function Home() {
         <CrossGameSection />
         <FragmentedMarketSection />
         <TrustedBySection />
-        <AvatarShowcaseSection />
+        {/* <AvatarShowcaseSection /> */}
         <TechStackSection />
         <DeveloperToolsSection />
         <IntegrationSection />
